@@ -1,12 +1,18 @@
+$containerwidth: 400px;
+
 .container {
-  max-width: 1040px;
+  max-width: $containerwidth;
   margin: 0 auto;
 
   header {
-    list-style: none;
+    margin: 0;
+
+    ul {
+      list-style: none;
+    }
 
     p {
-      
+      margin: 0;
     }
   }
 }

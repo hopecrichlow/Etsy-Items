@@ -1,5 +1,9 @@
 .container {
-  max-width: 1040px;
+  max-width: 400px;
   margin: 0 auto; }
   .container header {
-    list-style: none; }
+    margin: 0; }
+    .container header ul {
+      list-style: none; }
+    .container header p {
+      margin: 0; }
