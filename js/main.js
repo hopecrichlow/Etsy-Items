@@ -44,5 +44,4 @@ var textNode = document.createTextNode(str);
   //Append newly created node to our answer element
 answer1.appendChild(textNode);
 
-
 } ());
