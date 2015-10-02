@@ -1,6 +1,6 @@
 // IIFE
 (function () {
-  
+
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 //////////////////QUESTION ONE\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
@@ -45,5 +45,46 @@ var textNode = document.createTextNode(str);
 
   //Append newly created node to our answer element
 answer1.appendChild(textNode);
+
+
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+//////////////////QUESTION TWO\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+
+
+//Create an array for the items 
+var range2 = [];
+
+//Push all items with qualifying prices into the array
+items.forEach( function (item) {
+  if (item.price > 14 && item.price < 18) {
+    range2.push(item);
+} return range2;
+})
+console.log(range2);
+
+//Map the titles of the items
+var titles2 = range2.map( function(item) {
+ return item.title;
+});
+console.log(titles2);
+
+//List form for page format?
+
+
+
+//Make it show up on page
+
+  //Find our answer element
+var answer2 = document.querySelector('#answer2');
+console.log(answer2);
+
+  //Create a node from our above answer ready for the DOM
+var textNode2 = document.createTextNode(titles2);
+
+  //Append newly created node to our answer element
+answer2.appendChild(textNode2);
+
+
 
 } ());
