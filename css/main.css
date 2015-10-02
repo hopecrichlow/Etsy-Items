@@ -4,13 +4,16 @@ body {
 .container {
   margin: 0;
   width: 1440px;
-  font-family: 'Open Sans: 400', sans-serif; }
+  font-family: 'Roboto Slab', serif;
+  color: #565656; }
   .container header {
     margin: 0;
     max-width: 100%; }
     .container header ul {
       margin: 0;
       list-style: none;
+      font-family: 'Roboto', sans-serif;
+      text-color: #4F4E54;
       background-color: #FFFFFF;
       padding: 5px; }
     .container header .banner {
@@ -19,7 +22,7 @@ body {
       height: 250px; }
       .container header .banner img {
         height: 150px;
-        max-width: 100%; }
+        width: 1440px; }
   .container .main {
     max-width: 100%;
     margin-top: 30px;
@@ -27,20 +30,24 @@ body {
     background-color: #EEEEEE; }
     .container .main .box {
       border-top: 1px solid #ccc;
-      padding-bottom: 200px; }
+      padding-bottom: 70px; }
       .container .main .box h1 {
         display: inline-block;
         margin: -50px;
         padding: 5px;
         background-color: #EEEEEE; }
+      .container .main .box p {
+        margin: 100px;
+        font-size: 20px; }
   .container .footer {
     margin: 0;
     max-width: 100%; }
     .container .footer p {
-      height: 60px;
-      margin-top: 20px;
+      height: 25px;
+      margin: 0;
       text-align: center;
       background: #4B494F;
       color: #989898;
       padding: 5x;
-      padding-top: 50px; }
+      padding-top: 45px;
+      padding-bottom: 10px; }
