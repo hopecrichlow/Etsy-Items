@@ -65,13 +65,9 @@ console.log(range2);
 
 //Map the titles of the items
 var titles2 = range2.map( function(item) {
- return item.title;
+  return item.title;
 });
 console.log(titles2);
-
-//List form for page format?
-
-
 
 //Make it show up on page
 
@@ -84,6 +80,49 @@ var textNode2 = document.createTextNode(titles2);
 
   //Append newly created node to our answer element
 answer2.appendChild(textNode2);
+
+
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+//////////////////QUESTION THREE\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+
+//Filter items by currency
+var british = items.filter( function(item){
+  return item.currency_code === "GBP";
+});
+console.log(british);
+
+//Map title
+var britishTitle = british.map(function(item){
+  return item.title;
+});
+console.log(britishTitle);
+
+//Map price
+var britishPrice = british.map(function(item){
+  return item.price;
+});
+console.log(britishPrice);
+
+//Construct string
+var str3 = britishTitle + ' costs £' + britishPrice;
+console.log(str3);
+
+//Make it show up on page
+
+  //Find our answer element
+var answer3 = document.querySelector('#answer3');
+console.log(answer3);
+
+  //Create a node from our above answer ready for the DOM
+var textNode3 = document.createTextNode(str3);
+
+  //Append newly created node to our answer element
+answer3.appendChild(textNode3);
+
+
+
+
 
 
 
