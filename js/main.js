@@ -105,7 +105,7 @@ var britishPrice = british.map(function(item){
 console.log(britishPrice);
 
 //Construct string
-var str3 = britishTitle + ' costs £' + britishPrice;
+var str3 = britishTitle + ' costs \xA3' + britishPrice;
 console.log(str3);
 
 //Make it show up on page
