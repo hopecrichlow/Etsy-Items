@@ -232,12 +232,145 @@ answer4Fifth.appendChild(textNode4Fifth);
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 
 
+//Filter to find items with eight or more materials
+var stuff = items.filter(function(item){
+  return item.materials.length >= 8;
+});
+console.log(stuff);
 
-// var lotsOfStuff = items.forEach( function (item) {
-//   if (item.materials.length >= 8) {
-// } return lotsOfStuff;
-// })
-// console.log(lotsOfStuff);
+//Map titles
+var stuffTitle = stuff.map(function(item){
+  return item.title;
+});
+console.log(stuffTitle);
+
+//Map materials
+var stuffMaterials = stuff.map(function(item){
+  return item.materials;
+});
+console.log(stuffMaterials);
+
+//Create strings
+var str5First = stuffTitle[0] + 'has 9 materials:';
+console.log(str5First);
+
+var materials5First = stuffMaterials[0];
+console.log(stuffMaterials[0]);
+
+var str5Second = stuffTitle[1] + 'has 13 materials:';
+console.log(str5Second);
+
+var materials5Second = stuffMaterials[1];
+console.log(stuffMaterials[1]);
+
+//Make it show up on page
+
+  //Find our answer element
+var answer5First = document.querySelector('#answer5First');
+console.log(answer5First);
+
+var answer5m1 = document.querySelector('#answer5m1');
+console.log(answer5m1);
+var answer5m2 = document.querySelector('#answer5m2');
+console.log(answer5m2);
+var answer5m3 = document.querySelector('#answer5m3');
+console.log(answer5m3);
+var answer5m4 = document.querySelector('#answer5m4');
+console.log(answer5m4);
+var answer5m5 = document.querySelector('#answer5m5');
+console.log(answer5m5);
+var answer5m6 = document.querySelector('#answer5m6');
+console.log(answer5m6);
+var answer5m7 = document.querySelector('#answer5m7');
+console.log(answer5m7);
+var answer5m8 = document.querySelector('#answer5m8');
+console.log(answer5m8);
+var answer5m9 = document.querySelector('#answer5m9');
+console.log(answer5m9);
+
+var answer5Second = document.querySelector('#answer5Second');
+console.log(answer5Second);
+
+var answer5m10 = document.querySelector('#answer5m10');
+console.log(answer5m10);
+var answer5m11 = document.querySelector('#answer5m11');
+console.log(answer5m11);
+var answer5m12 = document.querySelector('#answer5m12');
+console.log(answer5m12);
+var answer5m13 = document.querySelector('#answer5m13');
+console.log(answer5m13);
+var answer5m14 = document.querySelector('#answer5m14');
+console.log(answer5m14);
+var answer5m15 = document.querySelector('#answer5m15');
+console.log(answer5m15);
+var answer5m7 = document.querySelector('#answer5m7');
+console.log(answer5m7);
+var answer5m8 = document.querySelector('#answer5m8');
+console.log(answer5m8);
+var answer5m9 = document.querySelector('#answer5m9');
+console.log(answer5m9);
+
+
+  //Create a node from our above answer ready for the DOM
+var textNode5First = document.createTextNode(str5First);
+var textNode5m1 = document.createTextNode(materials5First[0]);
+var textNode5m2 = document.createTextNode(materials5First[1]);
+var textNode5m3 = document.createTextNode(materials5First[2]);
+var textNode5m4 = document.createTextNode(materials5First[3]);
+var textNode5m5 = document.createTextNode(materials5First[4]);
+var textNode5m6 = document.createTextNode(materials5First[5]);
+var textNode5m7 = document.createTextNode(materials5First[6]);
+var textNode5m8 = document.createTextNode(materials5First[7]);
+var textNode5m9 = document.createTextNode(materials5First[8]);
+
+var textNode5Second = document.createTextNode(str5Second);
+var textNode5m10 = document.createTextNode(materials5Second[0]);
+var textNode5m11 = document.createTextNode(materials5Second[1]);
+var textNode5m12 = document.createTextNode(materials5Second[2]);
+var textNode5m13 = document.createTextNode(materials5Second[3]);
+var textNode5m14 = document.createTextNode(materials5Second[4]);
+var textNode5m15 = document.createTextNode(materials5Second[5]);
+var textNode5m16 = document.createTextNode(materials5Second[6]);
+var textNode5m17 = document.createTextNode(materials5Second[7]);
+var textNode5m18 = document.createTextNode(materials5Second[8]);
+var textNode5m19 = document.createTextNode(materials5Second[9]);
+var textNode5m20 = document.createTextNode(materials5Second[10]);
+var textNode5m21 = document.createTextNode(materials5Second[11);
+var textNode5m22 = document.createTextNode(materials5Second[12);
+
+// var textNode4Fourth = document.createTextNode(str4Fourth);
+// var textNode4Fifth = document.createTextNode(str4Fifth);
+
+  //Append newly created node to our answer element
+answer5First.appendChild(textNode5First);
+answer5m1.appendChild(textNode5m1);
+answer5m2.appendChild(textNode5m2);
+answer5m3.appendChild(textNode5m3);
+answer5m4.appendChild(textNode5m4);
+answer5m5.appendChild(textNode5m5);
+answer5m6.appendChild(textNode5m6);
+answer5m7.appendChild(textNode5m7);
+answer5m8.appendChild(textNode5m8);
+answer5m9.appendChild(textNode5m9);
+
+answer5Second.appendChild(textNode5Second);
+answer5m10.appendChild(textNode5m10);
+answer5m11.appendChild(textNode5m11);
+answer5m12.appendChild(textNode5m12);
+answer5m13.appendChild(textNode5m13);
+answer5m14.appendChild(textNode5m14);
+answer5m15.appendChild(textNode5m15);
+answer5m16.appendChild(textNode5m16);
+answer5m17.appendChild(textNode5m17);
+answer5m18.appendChild(textNode5m18);
+answer5m19.appendChild(textNode5m19);
+answer5m20.appendChild(textNode5m20);
+answer5m21.appendChild(textNode5m21);
+answer5m22.appendChild(textNode5m22);
+// answer4Third.appendChild(textNode4Third);
+// answer4Fourth.appendChild(textNode4Fourth);
+// answer4Fifth.appendChild(textNode4Fifth);
+
 
 //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
