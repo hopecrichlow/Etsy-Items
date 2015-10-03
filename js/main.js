@@ -71,15 +71,37 @@ console.log(titles2);
 
 //Make it show up on page
 
+  //Different arrays to give each item its own line
+var titles2First = [];
+var titles2Second = [];
+var titles2Third = [];
+
+titles2First.push(titles2[0]);
+console.log(titles2First);
+
+titles2Second.push(titles2[1]);
+console.log(titles2Second);
+
+titles2Third.push(titles2[2]);
+console.log(titles2Third);
+
   //Find our answer element
-var answer2 = document.querySelector('#answer2');
-console.log(answer2);
+var answer2First = document.querySelector('#answer2First');
+console.log(answer2First);
+var answer2Second = document.querySelector('#answer2Second');
+console.log(answer2Second);
+var answer2Third = document.querySelector('#answer2Third');
+console.log(answer2Third);
 
   //Create a node from our above answer ready for the DOM
-var textNode2 = document.createTextNode(titles2);
+var textNode2First = document.createTextNode(titles2First);
+var textNode2Second = document.createTextNode(titles2Second);
+var textNode2Third = document.createTextNode(titles2Third);
 
   //Append newly created node to our answer element
-answer2.appendChild(textNode2);
+answer2First.appendChild(textNode2First);
+answer2Second.appendChild(textNode2Second);
+answer2Third.appendChild(textNode2Third);
 
 
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
@@ -121,9 +143,23 @@ var textNode3 = document.createTextNode(str3);
 answer3.appendChild(textNode3);
 
 
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+//////////////////QUESTION FOUR\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 
+//Create an array for wood items
+var wooden = [];
 
+//Push all items made of wood into the array
+// var materials = items.filter( function (item) {
+//   return item.materials 
+// })
+// console.log(materials);
 
+var wood = items.filter( function(item){
+  return item.materials === "wood";
+});
+console.log(wood);
 
 
 } ());
