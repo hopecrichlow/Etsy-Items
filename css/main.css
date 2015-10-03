@@ -39,6 +39,8 @@ body {
       .container .main .box p {
         margin: 37px;
         font-size: 20px; }
+      .container .main .box .materials {
+        margin: 10px; }
   .container .footer {
     margin: 0;
     max-width: 100%; }
