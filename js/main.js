@@ -1,9 +1,15 @@
 // IIFE
 (function () {
 
+
+
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 //////////////////QUESTION ONE\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+
+
 
 //Create an array of just the prices
 
@@ -47,9 +53,13 @@ var textNode = document.createTextNode(str);
 answer1.appendChild(textNode);
 
 
+
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 //////////////////QUESTION TWO\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+
 
 
 //Create an array for the items 
@@ -104,9 +114,14 @@ answer2Second.appendChild(textNode2Second);
 answer2Third.appendChild(textNode2Third);
 
 
+
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
-//////////////////QUESTION THREE\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////QUESTION THREE\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+
+
 
 //Filter items by currency
 var british = items.filter( function(item){
@@ -143,23 +158,94 @@ var textNode3 = document.createTextNode(str3);
 answer3.appendChild(textNode3);
 
 
+
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
-//////////////////QUESTION FOUR\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////QUESTION FOUR\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+
+
 
 //Create an array for wood items
-var wooden = [];
+var wooden = items.filter( function(item){
+  return item.materials.indexOf('wood') !== -1;
+});
+console.log(wooden);
 
-//Push all items made of wood into the array
-// var materials = items.filter( function (item) {
-//   return item.materials 
+//Map titles
+var woodenTitle = wooden.map(function(item){
+  return item.title;
+});
+console.log(woodenTitle);
+
+//Construct strings
+var str4First = woodenTitle[0] + 'is made of wood.';
+console.log(str4First);
+
+var str4Second = woodenTitle[1] + 'is made of wood.';
+console.log(str4Second);
+
+var str4Third = woodenTitle[2] + 'is made of wood.';
+console.log(str4Third);
+
+var str4Fourth = woodenTitle[3] + 'is made of wood.';
+console.log(str4Fourth);
+
+var str4Fifth = woodenTitle[4] + 'is made of wood.';
+console.log(str4Fifth);
+
+//Make it show up on page
+
+  //Find our answer element
+var answer4First = document.querySelector('#answer4First');
+console.log(answer4First);
+var answer4Second = document.querySelector('#answer4Second');
+console.log(answer4Second);
+var answer4Third = document.querySelector('#answer4Third');
+console.log(answer4Third);
+var answer4Fourth = document.querySelector('#answer4Fourth');
+console.log(answer4Fourth);
+var answer4Fifth = document.querySelector('#answer4Fifth');
+console.log(answer4Fifth);
+
+  //Create a node from our above answer ready for the DOM
+var textNode4First = document.createTextNode(str4First);
+var textNode4Second = document.createTextNode(str4Second);
+var textNode4Third = document.createTextNode(str4Third);
+var textNode4Fourth = document.createTextNode(str4Fourth);
+var textNode4Fifth = document.createTextNode(str4Fifth);
+
+  //Append newly created node to our answer element
+answer4First.appendChild(textNode4First);
+answer4Second.appendChild(textNode4Second);
+answer4Third.appendChild(textNode4Third);
+answer4Fourth.appendChild(textNode4Fourth);
+answer4Fifth.appendChild(textNode4Fifth);
+
+
+
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+//////////////////QUESTION FIFTH\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+
+
+
+// var lotsOfStuff = items.forEach( function (item) {
+//   if (item.materials.length >= 8) {
+// } return lotsOfStuff;
 // })
-// console.log(materials);
+// console.log(lotsOfStuff);
 
-
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 //////////////////QUESTION SIX\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+
+
 
 //Filter and find items made by seller
 var homemade = items.filter( function(item){
