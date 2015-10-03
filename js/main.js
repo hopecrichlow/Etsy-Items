@@ -156,10 +156,37 @@ var wooden = [];
 // })
 // console.log(materials);
 
-var wood = items.filter( function(item){
-  return item.materials === "wood";
+
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+//////////////////QUESTION SIX\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
+
+//Filter and find items made by seller
+var homemade = items.filter( function(item){
+  return item.who_made === "i_did";
 });
-console.log(wood);
+console.log(homemade);
+
+//Count the number of items
+console.log(homemade.length);
+
+//Construct string
+var str6 = homemade.length + ' were made by their sellers';
+console.log(str6);
+
+//Make it show up on page
+
+  //Find our answer element
+var answer6 = document.querySelector('#answer6');
+console.log(answer6);
+
+  //Create a node from our above answer ready for the DOM
+var textNode6 = document.createTextNode(str6);
+
+  //Append newly created node to our answer element
+answer6.appendChild(textNode6);
+
+
 
 
 } ());
