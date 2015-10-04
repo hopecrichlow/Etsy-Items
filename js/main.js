@@ -1,50 +1,41 @@
 // IIFE
 (function () {
 
-
-
 //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 //////////////////QUESTION ONE\\\\\\\\\\\\\\\\\\\\\\\\\\
 //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 
-
-
 //Create an array of just the prices
-
-  // items.forEach( function(item) {
-  //   console.log(item.price); //price of each item
-  // })
 var prices = items.map( function (item) {
-  return item.price;  //+ ' is for ' + item.title ;
-})
-console.log(prices);
-
+  return item.price; 
+});
+  console.log(prices);
 
 //Add all of the prices together
 var sum = prices.reduce( function (prev, next){
   return prev + next;
-})
-console.log(sum);
+});
+  console.log(sum);
 
 //Divide by total number of items
 var avg = sum / prices.length;
-console.log(avg);
+  console.log(avg);
 
 //Convert it to 2 decimal places
 var converted = avg.toFixed(2);
-console.log(converted);
+  console.log(converted);
 
 //Make it a string
 var str = 'The average price is $' + converted;
-console.log(str);
+
+  console.log(str);
 
 //Make it show up on page
-
   //Find our answer element
 var answer1 = document.querySelector('#answer1');
-console.log(answer1);
+  console.log(answer1);
 
   //Create a node from our above answer ready for the DOM
 var textNode = document.createTextNode(str);
@@ -60,8 +51,6 @@ answer1.appendChild(textNode);
 //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 
-
-
 //Create an array for the items 
 var range2 = [];
 
@@ -70,38 +59,39 @@ items.forEach( function (item) {
   if (item.price > 14 && item.price < 18) {
     range2.push(item);
 } return range2;
-})
-console.log(range2);
+});
+  console.log(range2);
 
 //Map the titles of the items
 var titles2 = range2.map( function(item) {
   return item.title;
 });
-console.log(titles2);
+  console.log(titles2);
 
 //Make it show up on page
-
   //Different arrays to give each item its own line
 var titles2First = [];
 var titles2Second = [];
 var titles2Third = [];
 
 titles2First.push(titles2[0]);
-console.log(titles2First);
+  console.log(titles2First);
 
 titles2Second.push(titles2[1]);
-console.log(titles2Second);
+  console.log(titles2Second);
 
 titles2Third.push(titles2[2]);
-console.log(titles2Third);
+  console.log(titles2Third);
 
   //Find our answer element
 var answer2First = document.querySelector('#answer2First');
-console.log(answer2First);
+  console.log(answer2First);
+
 var answer2Second = document.querySelector('#answer2Second');
-console.log(answer2Second);
+  console.log(answer2Second);
+
 var answer2Third = document.querySelector('#answer2Third');
-console.log(answer2Third);
+  console.log(answer2Third);
 
   //Create a node from our above answer ready for the DOM
 var textNode2First = document.createTextNode(titles2First);
@@ -121,35 +111,32 @@ answer2Third.appendChild(textNode2Third);
 //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 
-
-
 //Filter items by currency
 var british = items.filter( function(item){
   return item.currency_code === "GBP";
 });
-console.log(british);
+  console.log(british);
 
 //Map title
 var britishTitle = british.map(function(item){
   return item.title;
 });
-console.log(britishTitle);
+  console.log(britishTitle);
 
 //Map price
 var britishPrice = british.map(function(item){
   return item.price;
 });
-console.log(britishPrice);
+  console.log(britishPrice);
 
 //Construct string
 var str3 = britishTitle + ' costs \xA3' + britishPrice;
-console.log(str3);
+  console.log(str3);
 
 //Make it show up on page
-
   //Find our answer element
 var answer3 = document.querySelector('#answer3');
-console.log(answer3);
+  console.log(answer3);
 
   //Create a node from our above answer ready for the DOM
 var textNode3 = document.createTextNode(str3);
@@ -165,49 +152,50 @@ answer3.appendChild(textNode3);
 //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 
-
-
 //Create an array for wood items
 var wooden = items.filter( function(item){
   return item.materials.indexOf('wood') !== -1;
 });
-console.log(wooden);
+  console.log(wooden);
 
 //Map titles
 var woodenTitle = wooden.map(function(item){
   return item.title;
 });
-console.log(woodenTitle);
+  console.log(woodenTitle);
 
 //Construct strings
 var str4First = woodenTitle[0] + 'is made of wood.';
-console.log(str4First);
+  console.log(str4First);
 
 var str4Second = woodenTitle[1] + 'is made of wood.';
-console.log(str4Second);
+  console.log(str4Second);
 
 var str4Third = woodenTitle[2] + 'is made of wood.';
-console.log(str4Third);
+  console.log(str4Third);
 
 var str4Fourth = woodenTitle[3] + 'is made of wood.';
-console.log(str4Fourth);
+  console.log(str4Fourth);
 
 var str4Fifth = woodenTitle[4] + 'is made of wood.';
-console.log(str4Fifth);
+  console.log(str4Fifth);
 
 //Make it show up on page
-
   //Find our answer element
 var answer4First = document.querySelector('#answer4First');
-console.log(answer4First);
+  console.log(answer4First);
+
 var answer4Second = document.querySelector('#answer4Second');
-console.log(answer4Second);
+  console.log(answer4Second);
+
 var answer4Third = document.querySelector('#answer4Third');
-console.log(answer4Third);
+  console.log(answer4Third);
+
 var answer4Fourth = document.querySelector('#answer4Fourth');
-console.log(answer4Fourth);
+  console.log(answer4Fourth);
+
 var answer4Fifth = document.querySelector('#answer4Fifth');
-console.log(answer4Fifth);
+  console.log(answer4Fifth);
 
   //Create a node from our above answer ready for the DOM
 var textNode4First = document.createTextNode(str4First);
@@ -231,85 +219,98 @@ answer4Fifth.appendChild(textNode4Fifth);
 //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 
-
 //Filter to find items with eight or more materials
 var stuff = items.filter(function(item){
   return item.materials.length >= 8;
 });
-console.log(stuff);
+  console.log(stuff);
 
 //Map titles
 var stuffTitle = stuff.map(function(item){
   return item.title;
 });
-console.log(stuffTitle);
+  console.log(stuffTitle);
 
 //Map materials
 var stuffMaterials = stuff.map(function(item){
   return item.materials;
 });
-console.log(stuffMaterials);
+  console.log(stuffMaterials);
 
 //Create strings
 var str5First = stuffTitle[0] + 'has 9 materials:';
-console.log(str5First);
+  console.log(str5First);
 
 var materials5First = stuffMaterials[0];
-console.log(stuffMaterials[0]);
-
+  console.log(stuffMaterials[0]);
+  /////////////////////////////
 var str5Second = stuffTitle[1] + 'has 13 materials:';
-console.log(str5Second);
+  console.log(str5Second);
 
 var materials5Second = stuffMaterials[1];
-console.log(stuffMaterials[1]);
+  console.log(stuffMaterials[1]);
 
 //Make it show up on page
-
   //Find our answer element
 var answer5First = document.querySelector('#answer5First');
-console.log(answer5First);
+  console.log(answer5First);
 
 var answer5m1 = document.querySelector('#answer5m1');
-console.log(answer5m1);
-var answer5m2 = document.querySelector('#answer5m2');
-console.log(answer5m2);
-var answer5m3 = document.querySelector('#answer5m3');
-console.log(answer5m3);
-var answer5m4 = document.querySelector('#answer5m4');
-console.log(answer5m4);
-var answer5m5 = document.querySelector('#answer5m5');
-console.log(answer5m5);
-var answer5m6 = document.querySelector('#answer5m6');
-console.log(answer5m6);
-var answer5m7 = document.querySelector('#answer5m7');
-console.log(answer5m7);
-var answer5m8 = document.querySelector('#answer5m8');
-console.log(answer5m8);
-var answer5m9 = document.querySelector('#answer5m9');
-console.log(answer5m9);
+  console.log(answer5m1);
 
+var answer5m2 = document.querySelector('#answer5m2');
+  console.log(answer5m2);
+
+var answer5m3 = document.querySelector('#answer5m3');
+  console.log(answer5m3);
+
+var answer5m4 = document.querySelector('#answer5m4');
+  console.log(answer5m4);
+
+var answer5m5 = document.querySelector('#answer5m5');
+  console.log(answer5m5);
+
+var answer5m6 = document.querySelector('#answer5m6');
+  console.log(answer5m6);
+
+var answer5m7 = document.querySelector('#answer5m7');
+  console.log(answer5m7);
+
+var answer5m8 = document.querySelector('#answer5m8');
+  console.log(answer5m8);
+
+var answer5m9 = document.querySelector('#answer5m9');
+  console.log(answer5m9);
+  /////////////////////////////////////////////////
 var answer5Second = document.querySelector('#answer5Second');
-console.log(answer5Second);
+  console.log(answer5Second);
 
 var answer5m10 = document.querySelector('#answer5m10');
-console.log(answer5m10);
-var answer5m11 = document.querySelector('#answer5m11');
-console.log(answer5m11);
-var answer5m12 = document.querySelector('#answer5m12');
-console.log(answer5m12);
-var answer5m13 = document.querySelector('#answer5m13');
-console.log(answer5m13);
-var answer5m14 = document.querySelector('#answer5m14');
-console.log(answer5m14);
-var answer5m15 = document.querySelector('#answer5m15');
-console.log(answer5m15);
-var answer5m7 = document.querySelector('#answer5m7');
-console.log(answer5m7);
-var answer5m8 = document.querySelector('#answer5m8');
-console.log(answer5m8);
-var answer5m9 = document.querySelector('#answer5m9');
-console.log(answer5m9);
+  console.log(answer5m10);
 
+var answer5m11 = document.querySelector('#answer5m11');
+  console.log(answer5m11);
+
+var answer5m12 = document.querySelector('#answer5m12');
+  console.log(answer5m12);
+
+var answer5m13 = document.querySelector('#answer5m13');
+  console.log(answer5m13);
+
+var answer5m14 = document.querySelector('#answer5m14');
+  console.log(answer5m14);
+
+var answer5m15 = document.querySelector('#answer5m15');
+  console.log(answer5m15);
+
+var answer5m7 = document.querySelector('#answer5m7');
+  console.log(answer5m7);
+
+var answer5m8 = document.querySelector('#answer5m8');
+  console.log(answer5m8);
+
+var answer5m9 = document.querySelector('#answer5m9');
+  console.log(answer5m9);
 
   //Create a node from our above answer ready for the DOM
 var textNode5First = document.createTextNode(str5First);
@@ -338,9 +339,6 @@ var textNode5m20 = document.createTextNode(materials5Second[10]);
 var textNode5m21 = document.createTextNode(materials5Second[11]);
 var textNode5m22 = document.createTextNode(materials5Second[12]);
 
-// var textNode4Fourth = document.createTextNode(str4Fourth);
-// var textNode4Fifth = document.createTextNode(str4Fifth);
-
   //Append newly created node to our answer element
 answer5First.appendChild(textNode5First);
 answer5m1.appendChild(textNode5m1);
@@ -367,9 +365,7 @@ answer5m19.appendChild(textNode5m19);
 answer5m20.appendChild(textNode5m20);
 answer5m21.appendChild(textNode5m21);
 answer5m22.appendChild(textNode5m22);
-// answer4Third.appendChild(textNode4Third);
-// answer4Fourth.appendChild(textNode4Fourth);
-// answer4Fifth.appendChild(textNode4Fifth);
+
 
 
 //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -378,34 +374,29 @@ answer5m22.appendChild(textNode5m22);
 //////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////\\
 
-
-
 //Filter and find items made by seller
 var homemade = items.filter( function(item){
   return item.who_made === "i_did";
 });
-console.log(homemade);
+  console.log(homemade);
 
 //Count the number of items
-console.log(homemade.length);
+  console.log(homemade.length);
 
 //Construct string
 var str6 = homemade.length + ' were made by their sellers';
-console.log(str6);
+  console.log(str6);
 
 //Make it show up on page
-
   //Find our answer element
 var answer6 = document.querySelector('#answer6');
-console.log(answer6);
+  console.log(answer6);
 
   //Create a node from our above answer ready for the DOM
 var textNode6 = document.createTextNode(str6);
 
   //Append newly created node to our answer element
 answer6.appendChild(textNode6);
-
-
 
 
 } ());
